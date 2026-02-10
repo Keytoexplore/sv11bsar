@@ -8,6 +8,10 @@ import {
   convertJPYtoUSD,
 } from '@/lib/arbitrage';
 
+// Disable static generation - fetch data on-demand only, not during builds
+export const dynamic = 'force-dynamic';
+export const revalidate = 259200; // 3 days
+
 type RarityType = 'Special Art Rare' | 'Art Rare' | 'Super Rare';
 
 async function getCardsForSet(apiKey: string, setName: string, rarity: RarityType) {
