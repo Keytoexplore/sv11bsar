@@ -17,7 +17,7 @@ export interface FilterState {
   searchTerm: string;
 }
 
-export function FilterBar({ onFilterChange, totalCards, filteredCount }: FilterBarProps) {
+export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterBarProps) {
   const [filters, setFilters] = useState<FilterState>({
     set: 'all',
     rarity: 'all',
