@@ -209,18 +209,32 @@ export interface TorecaMatch {
 /**
  * Match Toreca price to a card
  */
+/**
+ * Extract set code from API set name
+ */
+function extractSetCode(cardSetName: string): string | null {
+  const lowerName = cardSetName.toLowerCase();
+  
+  // SV11 sets
+  if (lowerName.includes('black bolt')) return 'SV11B';
+  if (lowerName.includes('white flare')) return 'SV11W';
+  
+  // Mega sets - match "M3:", "M3 ", or just "M3"
+  if (/\bm3\b/i.test(cardSetName)) return 'M3';
+  if (/\bm2a\b/i.test(cardSetName)) return 'M2a';
+  if (/\bm2\b/i.test(cardSetName)) return 'M2';
+  if (/\bm1l\b/i.test(cardSetName)) return 'M1L';
+  if (/\bm1s\b/i.test(cardSetName)) return 'M1S';
+  
+  return null;
+}
+
 export function matchTorecaPrice(
   cardSetName: string,
   cardNumber: string,
   torecaPrices: TorecaPrice[]
 ): TorecaPrice | null {
-  // Extract set code from set name (e.g., "Black Bolt" -> "SV11B")
-  const setCode = cardSetName.toLowerCase().includes('black bolt')
-    ? 'SV11B'
-    : cardSetName.toLowerCase().includes('white flare')
-    ? 'SV11W'
-    : null;
-
+  const setCode = extractSetCode(cardSetName);
   if (!setCode) return null;
 
   return torecaPrices.find(
@@ -237,12 +251,7 @@ export function matchBothTorecaSources(
   japanTorecaPrices: TorecaPrice[],
   torecacampPrices: TorecaPrice[]
 ): TorecaMatch {
-  // Extract set code
-  const setCode = cardSetName.toLowerCase().includes('black bolt')
-    ? 'SV11B'
-    : cardSetName.toLowerCase().includes('white flare')
-    ? 'SV11W'
-    : null;
+  const setCode = extractSetCode(cardSetName);
   
   const result: TorecaMatch = {
     japanToreca: null,
