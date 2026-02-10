@@ -1,1 +1,1541 @@
-[]
+[
+  {
+    "cardNumber": "116/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:48:59.258Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215303-a-damaged"
+  },
+  {
+    "cardNumber": "112/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:01.197Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215299-a-damaged"
+  },
+  {
+    "cardNumber": "110/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:03.187Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215297-a-damaged"
+  },
+  {
+    "cardNumber": "115/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:05.112Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215302-a-damaged"
+  },
+  {
+    "cardNumber": "119/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:07.053Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215306-a-damaged"
+  },
+  {
+    "cardNumber": "134/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:09.050Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215321-a-damaged"
+  },
+  {
+    "cardNumber": "121/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:10.919Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215308-a-damaged"
+  },
+  {
+    "cardNumber": "166/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:12.824Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215353-a-damaged"
+  },
+  {
+    "cardNumber": "150/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:14.679Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215337-a-damaged"
+  },
+  {
+    "cardNumber": "138/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:16.549Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215325-a-damaged"
+  },
+  {
+    "cardNumber": "128/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:18.416Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215315-a-damaged"
+  },
+  {
+    "cardNumber": "129/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:20.313Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215316-a-damaged"
+  },
+  {
+    "cardNumber": "127/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:22.181Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215314-a-damaged"
+  },
+  {
+    "cardNumber": "105/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:24.048Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215292-a-damaged"
+  },
+  {
+    "cardNumber": "091/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:25.917Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215278-a-damaged"
+  },
+  {
+    "cardNumber": "151/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:27.761Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215338-a-damaged"
+  },
+  {
+    "cardNumber": "103/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:29.677Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215290-a-damaged"
+  },
+  {
+    "cardNumber": "139/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:31.556Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215326-a-damaged"
+  },
+  {
+    "cardNumber": "153/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:33.436Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215340-a-damaged"
+  },
+  {
+    "cardNumber": "123/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 1800,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:35.353Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215310-a-damaged"
+  },
+  {
+    "cardNumber": "107/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:37.357Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215294-a-damaged"
+  },
+  {
+    "cardNumber": "094/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:39.254Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215281-a-damaged"
+  },
+  {
+    "cardNumber": "141/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:41.136Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215328-a-damaged"
+  },
+  {
+    "cardNumber": "124/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:43.028Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215311-a-damaged"
+  },
+  {
+    "cardNumber": "156/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 550,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:44.915Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215343-a-damaged"
+  },
+  {
+    "cardNumber": "126/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:46.784Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215313-a-damaged"
+  },
+  {
+    "cardNumber": "100/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:48.698Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215287-a-damaged"
+  },
+  {
+    "cardNumber": "090/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:50.541Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215277-a-damaged"
+  },
+  {
+    "cardNumber": "093/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:52.388Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215280-a-damaged"
+  },
+  {
+    "cardNumber": "132/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:54.295Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215319-a-damaged"
+  },
+  {
+    "cardNumber": "155/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:56.146Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215342-a-damaged"
+  },
+  {
+    "cardNumber": "098/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:49:58.134Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215285-a-damaged"
+  },
+  {
+    "cardNumber": "104/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 850,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:00.048Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215291-a-damaged"
+  },
+  {
+    "cardNumber": "101/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:01.948Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215288-a-damaged"
+  },
+  {
+    "cardNumber": "131/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:03.785Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215318-a-damaged"
+  },
+  {
+    "cardNumber": "088/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:05.801Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215275-a-damaged"
+  },
+  {
+    "cardNumber": "130/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:07.693Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215317-a-damaged"
+  },
+  {
+    "cardNumber": "149/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:09.592Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215336-a-damaged"
+  },
+  {
+    "cardNumber": "148/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:11.471Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215335-a-damaged"
+  },
+  {
+    "cardNumber": "106/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:13.322Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215293-a-damaged"
+  },
+  {
+    "cardNumber": "122/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:15.234Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215309-a-damaged"
+  },
+  {
+    "cardNumber": "158/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:17.132Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215345-a-damaged"
+  },
+  {
+    "cardNumber": "154/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 550,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:19.017Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215341-a-damaged"
+  },
+  {
+    "cardNumber": "143/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:20.914Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215330-a-damaged"
+  },
+  {
+    "cardNumber": "109/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 7100,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:22.770Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215296-a-damaged"
+  },
+  {
+    "cardNumber": "092/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:24.638Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215279-a-damaged"
+  },
+  {
+    "cardNumber": "097/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 1600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:26.516Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215284-a-damaged"
+  },
+  {
+    "cardNumber": "136/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:28.347Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215323-a-damaged"
+  },
+  {
+    "cardNumber": "146/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:30.241Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215333-a-damaged"
+  },
+  {
+    "cardNumber": "102/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 950,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:33.037Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215289-a-damaged"
+  },
+  {
+    "cardNumber": "157/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:34.945Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215344-a-damaged"
+  },
+  {
+    "cardNumber": "152/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:36.911Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215339-a-damaged"
+  },
+  {
+    "cardNumber": "140/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:38.767Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215327-a-damaged"
+  },
+  {
+    "cardNumber": "113/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:40.660Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215300-a-damaged"
+  },
+  {
+    "cardNumber": "114/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:42.565Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215301-a-damaged"
+  },
+  {
+    "cardNumber": "118/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 850,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:44.419Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215305-a-damaged"
+  },
+  {
+    "cardNumber": "147/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:46.279Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215334-a-damaged"
+  },
+  {
+    "cardNumber": "108/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:48.149Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215295-a-damaged"
+  },
+  {
+    "cardNumber": "096/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:50.057Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215283-a-damaged"
+  },
+  {
+    "cardNumber": "120/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:51.951Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215307-a-damaged"
+  },
+  {
+    "cardNumber": "133/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:53.890Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215320-a-damaged"
+  },
+  {
+    "cardNumber": "137/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:55.788Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215324-a-damaged"
+  },
+  {
+    "cardNumber": "144/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:57.718Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215331-a-damaged"
+  },
+  {
+    "cardNumber": "125/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:50:59.587Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215312-a-damaged"
+  },
+  {
+    "cardNumber": "165/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 650,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:01.560Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215352-a-damaged"
+  },
+  {
+    "cardNumber": "161/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:03.470Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215348-a-damaged"
+  },
+  {
+    "cardNumber": "160/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:05.372Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215347-a-damaged"
+  },
+  {
+    "cardNumber": "168/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 3300,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:07.531Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215355-a-damaged"
+  },
+  {
+    "cardNumber": "170/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 2100,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:09.435Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215357-a-damaged"
+  },
+  {
+    "cardNumber": "171/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 700,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:11.326Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215358-a-damaged"
+  },
+  {
+    "cardNumber": "159/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:13.247Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215346-a-damaged"
+  },
+  {
+    "cardNumber": "111/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:15.185Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215298-a-damaged"
+  },
+  {
+    "cardNumber": "089/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:17.165Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215276-a-damaged"
+  },
+  {
+    "cardNumber": "087/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 800,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:19.192Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215274-a-damaged"
+  },
+  {
+    "cardNumber": "145/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:21.057Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215332-a-damaged"
+  },
+  {
+    "cardNumber": "135/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:22.981Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215322-a-damaged"
+  },
+  {
+    "cardNumber": "117/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 1000,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:24.844Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215304-a-damaged"
+  },
+  {
+    "cardNumber": "142/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:26.758Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215329-a-damaged"
+  },
+  {
+    "cardNumber": "099/086",
+    "setCode": "SV11B",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:28.622Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215286-a-damaged"
+  },
+  {
+    "cardNumber": "173/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 5300,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:30.535Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215360-a-damaged"
+  },
+  {
+    "cardNumber": "169/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 19000,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:32.552Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215356-a-damaged"
+  },
+  {
+    "cardNumber": "163/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 200,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:34.567Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215350-a-damaged"
+  },
+  {
+    "cardNumber": "162/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 200,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:36.532Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215349-a-damaged"
+  },
+  {
+    "cardNumber": "167/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 2300,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:51:38.390Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215354-a-damaged"
+  },
+  {
+    "cardNumber": "115/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:05.292Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215636-a-damaged"
+  },
+  {
+    "cardNumber": "119/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:07.288Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215640-a-damaged"
+  },
+  {
+    "cardNumber": "116/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:09.211Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215637-a-damaged"
+  },
+  {
+    "cardNumber": "113/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 700,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:11.146Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215634-a-damaged"
+  },
+  {
+    "cardNumber": "114/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:13.054Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215635-a-damaged"
+  },
+  {
+    "cardNumber": "117/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:14.953Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215638-a-damaged"
+  },
+  {
+    "cardNumber": "118/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:16.864Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215639-a-damaged"
+  },
+  {
+    "cardNumber": "142/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:18.756Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215663-a-damaged"
+  },
+  {
+    "cardNumber": "146/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:20.674Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215667-a-damaged"
+  },
+  {
+    "cardNumber": "140/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 1200,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:22.566Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215661-a-damaged"
+  },
+  {
+    "cardNumber": "126/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:24.511Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215647-a-damaged"
+  },
+  {
+    "cardNumber": "136/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:26.362Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215657-a-damaged"
+  },
+  {
+    "cardNumber": "087/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:28.253Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215608-a-damaged"
+  },
+  {
+    "cardNumber": "147/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:30.130Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215668-a-damaged"
+  },
+  {
+    "cardNumber": "122/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 550,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:31.968Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215643-a-damaged"
+  },
+  {
+    "cardNumber": "107/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:33.886Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215628-a-damaged"
+  },
+  {
+    "cardNumber": "143/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:35.786Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215664-a-damaged"
+  },
+  {
+    "cardNumber": "129/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:37.639Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215650-a-damaged"
+  },
+  {
+    "cardNumber": "132/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:39.661Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215653-a-damaged"
+  },
+  {
+    "cardNumber": "109/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:41.625Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215630-a-damaged"
+  },
+  {
+    "cardNumber": "144/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:43.554Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215665-a-damaged"
+  },
+  {
+    "cardNumber": "094/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:45.397Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215615-a-damaged"
+  },
+  {
+    "cardNumber": "101/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:47.227Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215622-a-damaged"
+  },
+  {
+    "cardNumber": "133/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:49.085Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215654-a-damaged"
+  },
+  {
+    "cardNumber": "155/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:51.047Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215676-a-damaged"
+  },
+  {
+    "cardNumber": "098/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 550,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:52.913Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215619-a-damaged"
+  },
+  {
+    "cardNumber": "149/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:54.828Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215670-a-damaged"
+  },
+  {
+    "cardNumber": "127/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:56.692Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215648-a-damaged"
+  },
+  {
+    "cardNumber": "137/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:52:58.541Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215658-a-damaged"
+  },
+  {
+    "cardNumber": "092/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:00.524Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215613-a-damaged"
+  },
+  {
+    "cardNumber": "104/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 800,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:02.451Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215625-a-damaged"
+  },
+  {
+    "cardNumber": "130/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:04.314Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215651-a-damaged"
+  },
+  {
+    "cardNumber": "100/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:06.197Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215621-a-damaged"
+  },
+  {
+    "cardNumber": "138/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:08.064Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215659-a-damaged"
+  },
+  {
+    "cardNumber": "152/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:09.901Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215673-a-damaged"
+  },
+  {
+    "cardNumber": "106/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:11.790Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215627-a-damaged"
+  },
+  {
+    "cardNumber": "158/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:13.649Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215679-a-damaged"
+  },
+  {
+    "cardNumber": "157/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:15.525Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215678-a-damaged"
+  },
+  {
+    "cardNumber": "095/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:17.495Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215616-a-damaged"
+  },
+  {
+    "cardNumber": "093/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:19.381Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215614-a-damaged"
+  },
+  {
+    "cardNumber": "108/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:21.245Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215629-a-damaged"
+  },
+  {
+    "cardNumber": "131/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:23.162Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215652-a-damaged"
+  },
+  {
+    "cardNumber": "148/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:25.016Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215669-a-damaged"
+  },
+  {
+    "cardNumber": "089/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:26.911Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215610-a-damaged"
+  },
+  {
+    "cardNumber": "139/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:28.759Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215660-a-damaged"
+  },
+  {
+    "cardNumber": "154/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:30.667Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215675-a-damaged"
+  },
+  {
+    "cardNumber": "153/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:32.499Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215674-a-damaged"
+  },
+  {
+    "cardNumber": "120/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:34.420Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215641-a-damaged"
+  },
+  {
+    "cardNumber": "123/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:36.255Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215644-a-damaged"
+  },
+  {
+    "cardNumber": "134/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:38.207Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215655-a-damaged"
+  },
+  {
+    "cardNumber": "135/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:40.201Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215656-a-damaged"
+  },
+  {
+    "cardNumber": "111/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:42.045Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215632-a-damaged"
+  },
+  {
+    "cardNumber": "112/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:43.897Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215633-a-damaged"
+  },
+  {
+    "cardNumber": "110/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:45.746Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215631-a-damaged"
+  },
+  {
+    "cardNumber": "125/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:47.567Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215646-a-damaged"
+  },
+  {
+    "cardNumber": "091/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:49.487Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215612-a-damaged"
+  },
+  {
+    "cardNumber": "105/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:51.298Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215626-a-damaged"
+  },
+  {
+    "cardNumber": "156/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:53.188Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215677-a-damaged"
+  },
+  {
+    "cardNumber": "090/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:55.029Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215611-a-damaged"
+  },
+  {
+    "cardNumber": "151/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:56.843Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215672-a-damaged"
+  },
+  {
+    "cardNumber": "145/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:53:59.680Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215666-a-damaged"
+  },
+  {
+    "cardNumber": "141/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 1400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:01.627Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215662-a-damaged"
+  },
+  {
+    "cardNumber": "160/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:03.538Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215681-a-damaged"
+  },
+  {
+    "cardNumber": "168/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 19000,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:05.442Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215689-a-damaged"
+  },
+  {
+    "cardNumber": "163/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:07.303Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215684-a-damaged"
+  },
+  {
+    "cardNumber": "162/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:09.276Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215683-a-damaged"
+  },
+  {
+    "cardNumber": "159/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:11.149Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215680-a-damaged"
+  },
+  {
+    "cardNumber": "172/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 850,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:13.007Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215693-a-damaged"
+  },
+  {
+    "cardNumber": "128/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:14.907Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215649-a-damaged"
+  },
+  {
+    "cardNumber": "121/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:16.828Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215642-a-damaged"
+  },
+  {
+    "cardNumber": "166/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 2400,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:18.710Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215687-a-damaged"
+  },
+  {
+    "cardNumber": "173/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 5600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:20.565Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215694-a-damaged"
+  },
+  {
+    "cardNumber": "099/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:22.436Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215620-a-damaged"
+  },
+  {
+    "cardNumber": "124/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:24.324Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215645-a-damaged"
+  },
+  {
+    "cardNumber": "088/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:26.187Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215609-a-damaged"
+  },
+  {
+    "cardNumber": "165/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 190,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:28.052Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215686-a-damaged"
+  },
+  {
+    "cardNumber": "097/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 350,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:29.876Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215618-a-damaged"
+  },
+  {
+    "cardNumber": "103/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 450,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:31.765Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215624-a-damaged"
+  },
+  {
+    "cardNumber": "102/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 2500,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:33.917Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215623-a-damaged"
+  },
+  {
+    "cardNumber": "150/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 250,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:35.802Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215671-a-damaged"
+  },
+  {
+    "cardNumber": "096/086",
+    "setCode": "SV11W",
+    "rarity": "AR",
+    "price_jpy": 1100,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:37.794Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215617-a-damaged"
+  },
+  {
+    "cardNumber": "164/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 200,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:39.888Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215685-a-damaged"
+  },
+  {
+    "cardNumber": "161/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 100,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:41.853Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215682-a-damaged"
+  },
+  {
+    "cardNumber": "171/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 3600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:43.767Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215692-a-damaged"
+  },
+  {
+    "cardNumber": "170/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 1600,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:45.812Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215691-a-damaged"
+  },
+  {
+    "cardNumber": "167/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 1100,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:47.750Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215688-a-damaged"
+  },
+  {
+    "cardNumber": "169/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 2100,
+    "in_stock": true,
+    "last_updated": "2026-02-10T12:54:49.639Z",
+    "url": "https://shop.japan-toreca.com/products/pokemon-215690-a-damaged"
+  }
+]
