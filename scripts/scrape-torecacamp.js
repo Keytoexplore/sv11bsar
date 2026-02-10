@@ -6,7 +6,8 @@ const path = require('path');
 // Configuration
 const SETS = [
   { code: 'SV11B', searchTerm: 'SV11B' },
-  { code: 'SV11W', searchTerm: 'SV11W' }
+  { code: 'SV11W', searchTerm: 'SV11W' },
+  { code: 'M3', searchTerm: 'M3' }
 ];
 const RARITIES = ['SAR', 'AR', 'SR'];
 const BASE_URL = 'https://torecacamp-pokemon.com';

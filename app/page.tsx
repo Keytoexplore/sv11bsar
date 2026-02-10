@@ -45,7 +45,7 @@ async function getAllCards() {
   try {
     // Fetch all combinations: 2 sets × 3 rarities = 6 requests
     const rarities: RarityType[] = ['Special Art Rare', 'Art Rare', 'Super Rare'];
-    const sets = ['Black Bolt', 'White Flare'];
+    const sets = ['Black Bolt', 'White Flare', 'M3'];
 
     const requests = sets.flatMap(set =>
       rarities.map(rarity => getCardsForSet(apiKey, set, rarity))

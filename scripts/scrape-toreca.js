@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const SETS = ['SV11B', 'SV11W'];
+const SETS = ['SV11B', 'SV11W', 'M3'];
 const BASE_URL = 'https://shop.japan-toreca.com';
 const DELAY_MS = 1500; // Be nice to their server
 
@@ -20,7 +20,8 @@ function extractCardData(html, url) {
   
   // Parse title components
   const cardNumberMatch = title.match(/\((\d+\/\d+)\)/);
-  const setMatch = title.match(/\[(SV11[BW])\]/);
+  // Match SV11B, SV11W, M3, M2a, M2, M1L, M1S
+  const setMatch = title.match(/\[(SV11[BW]|M3|M2a?|M1[LS])\]/i);
   const rarityMatch = title.match(/(SAR|AR|SR|BWR)/);
   
   if (!cardNumberMatch || !setMatch || !rarityMatch) {
@@ -28,7 +29,7 @@ function extractCardData(html, url) {
   }
   
   const cardNumber = cardNumberMatch[1];
-  const setCode = setMatch[1];
+  const setCode = setMatch[1].toUpperCase();
   const rarity = rarityMatch[1];
   
   // Extract price - look for ¥ symbols
@@ -84,8 +85,8 @@ async function scrapeSearchPage(setCode, page = 1) {
       if (href && text.includes('【状態A-】') && 
           (text.includes('SAR') || text.includes('AR') || text.includes('SR'))) {
         // Extract set code from title to verify
-        const titleSetMatch = text.match(/\[(SV11[BW])\]/);
-        if (titleSetMatch && titleSetMatch[1] === setCode) {
+        const titleSetMatch = text.match(/\[(SV11[BW]|M3|M2a?|M1[LS])\]/i);
+        if (titleSetMatch && titleSetMatch[1].toUpperCase() === setCode.toUpperCase()) {
           const fullUrl = href.startsWith('http') ? href : `${BASE_URL}${href}`;
           // Remove query params for deduplication
           const cleanUrl = fullUrl.split('?')[0];
