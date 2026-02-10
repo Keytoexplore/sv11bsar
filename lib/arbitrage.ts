@@ -131,7 +131,7 @@ export interface TorecaPrice {
 }
 
 /**
- * Load Toreca prices from JSON file
+ * Load Japan-Toreca prices from JSON file
  */
 export async function loadTorecaPrices(): Promise<TorecaPrice[]> {
   try {
@@ -149,9 +149,61 @@ export async function loadTorecaPrices(): Promise<TorecaPrice[]> {
     if (!response.ok) return [];
     return await response.json();
   } catch (error) {
-    console.error('Failed to load Toreca prices:', error);
+    console.error('Failed to load Japan-Toreca prices:', error);
     return [];
   }
+}
+
+/**
+ * Load Torecacamp prices from JSON file
+ */
+export async function loadTorecacampPrices(): Promise<TorecaPrice[]> {
+  try {
+    // Server-side: use fs to read the file
+    if (typeof window === 'undefined') {
+      const fs = require('fs');
+      const path = require('path');
+      const filePath = path.join(process.cwd(), 'public/data/torecacamp-prices.json');
+      
+      // Check if file exists
+      if (!fs.existsSync(filePath)) {
+        console.log('Torecacamp prices file not found (not scraped yet)');
+        return [];
+      }
+      
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      return JSON.parse(fileContent);
+    }
+    
+    // Client-side: use fetch
+    const response = await fetch('/data/torecacamp-prices.json');
+    if (!response.ok) return [];
+    return await response.json();
+  } catch (error) {
+    console.error('Failed to load Torecacamp prices:', error);
+    return [];
+  }
+}
+
+/**
+ * Combined Toreca data from both sources
+ */
+export interface TorecaMatch {
+  // Japan-Toreca data
+  japanToreca: {
+    price_jpy: number;
+    in_stock: boolean;
+    url: string;
+  } | null;
+  // Torecacamp data
+  torecacamp: {
+    price_jpy: number;
+    in_stock: boolean;
+    url: string;
+  } | null;
+  // Best price (lowest of both)
+  lowestPrice: number | null;
+  lowestSource: 'japan-toreca' | 'torecacamp' | null;
 }
 
 /**
@@ -174,4 +226,75 @@ export function matchTorecaPrice(
   return torecaPrices.find(
     (tp) => tp.setCode === setCode && tp.cardNumber === cardNumber
   ) || null;
+}
+
+/**
+ * Match card to prices from BOTH Toreca sources
+ */
+export function matchBothTorecaSources(
+  cardSetName: string,
+  cardNumber: string,
+  japanTorecaPrices: TorecaPrice[],
+  torecacampPrices: TorecaPrice[]
+): TorecaMatch {
+  // Extract set code
+  const setCode = cardSetName.toLowerCase().includes('black bolt')
+    ? 'SV11B'
+    : cardSetName.toLowerCase().includes('white flare')
+    ? 'SV11W'
+    : null;
+  
+  const result: TorecaMatch = {
+    japanToreca: null,
+    torecacamp: null,
+    lowestPrice: null,
+    lowestSource: null
+  };
+  
+  if (!setCode) return result;
+  
+  // Match Japan-Toreca
+  const japanMatch = japanTorecaPrices.find(
+    (tp) => tp.setCode === setCode && tp.cardNumber === cardNumber
+  );
+  
+  if (japanMatch) {
+    result.japanToreca = {
+      price_jpy: japanMatch.price_jpy,
+      in_stock: japanMatch.in_stock,
+      url: japanMatch.url
+    };
+  }
+  
+  // Match Torecacamp
+  const campMatch = torecacampPrices.find(
+    (tp) => tp.setCode === setCode && tp.cardNumber === cardNumber
+  );
+  
+  if (campMatch) {
+    result.torecacamp = {
+      price_jpy: campMatch.price_jpy,
+      in_stock: campMatch.in_stock,
+      url: campMatch.url
+    };
+  }
+  
+  // Determine lowest price
+  if (result.japanToreca && result.torecacamp) {
+    if (result.japanToreca.price_jpy <= result.torecacamp.price_jpy) {
+      result.lowestPrice = result.japanToreca.price_jpy;
+      result.lowestSource = 'japan-toreca';
+    } else {
+      result.lowestPrice = result.torecacamp.price_jpy;
+      result.lowestSource = 'torecacamp';
+    }
+  } else if (result.japanToreca) {
+    result.lowestPrice = result.japanToreca.price_jpy;
+    result.lowestSource = 'japan-toreca';
+  } else if (result.torecacamp) {
+    result.lowestPrice = result.torecacamp.price_jpy;
+    result.lowestSource = 'torecacamp';
+  }
+  
+  return result;
 }

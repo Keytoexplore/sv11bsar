@@ -2,7 +2,8 @@ import { RefreshButton } from '@/components/RefreshButton';
 import {
   getExchangeRate,
   loadTorecaPrices,
-  matchTorecaPrice,
+  loadTorecacampPrices,
+  matchBothTorecaSources,
   calculateProfitMargin,
   convertJPYtoUSD,
 } from '@/lib/arbitrage';
@@ -96,31 +97,45 @@ async function getAllCards() {
       planRestrictions: allData[0].metadata.planRestrictions
     };
 
-    // Integrate Toreca prices and calculate arbitrage
-    const [torecaPrices, exchangeRate] = await Promise.all([
+    // Integrate Toreca prices from BOTH sources and calculate arbitrage
+    const [japanTorecaPrices, torecacampPrices, exchangeRate] = await Promise.all([
       loadTorecaPrices(),
+      loadTorecacampPrices(),
       getExchangeRate(),
     ]);
 
     const cardsWithArbitrage = combinedCards.map((card) => {
-      const torecaMatch = matchTorecaPrice(card.setName, card.cardNumber, torecaPrices);
+      const torecaMatch = matchBothTorecaSources(
+        card.setName,
+        card.cardNumber,
+        japanTorecaPrices,
+        torecacampPrices
+      );
 
-      if (torecaMatch) {
-        const torecaUSD = convertJPYtoUSD(torecaMatch.price_jpy, exchangeRate);
+      // If we have at least one Toreca price
+      if (torecaMatch.lowestPrice) {
+        const lowestUSD = convertJPYtoUSD(torecaMatch.lowestPrice, exchangeRate);
         const profitMargin = calculateProfitMargin(
           card.prices.market,
-          torecaMatch.price_jpy,
+          torecaMatch.lowestPrice,
           exchangeRate
         );
 
         return {
           ...card,
-          toreca_jpy: torecaMatch.price_jpy,
-          toreca_usd: torecaUSD,
-          toreca_url: torecaMatch.url,
-          toreca_in_stock: torecaMatch.in_stock,
+          // Keep old fields for backwards compatibility (use lowest)
+          toreca_jpy: torecaMatch.lowestPrice,
+          toreca_usd: lowestUSD,
+          toreca_url: torecaMatch.lowestSource === 'japan-toreca' 
+            ? torecaMatch.japanToreca?.url 
+            : torecaMatch.torecacamp?.url,
+          toreca_in_stock: torecaMatch.lowestSource === 'japan-toreca'
+            ? torecaMatch.japanToreca?.in_stock
+            : torecaMatch.torecacamp?.in_stock,
           profit_margin: profitMargin,
           exchange_rate: exchangeRate,
+          // New fields for both sources
+          toreca_match: torecaMatch,
         };
       }
 

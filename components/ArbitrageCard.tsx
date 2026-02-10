@@ -6,6 +6,8 @@ import {
   getProfitCategory,
   getProfitCategoryColors,
   getProfitCategoryLabel,
+  convertJPYtoUSD,
+  type TorecaMatch,
 } from '@/lib/arbitrage';
 
 interface ArbitrageCardProps {
@@ -25,13 +27,15 @@ interface ArbitrageCardProps {
       lastUpdated: string;
     };
     tcgPlayerUrl: string;
-    // Arbitrage data
+    // Arbitrage data (old fields for lowest price)
     toreca_jpy?: number;
     toreca_usd?: number;
     toreca_url?: string;
     toreca_in_stock?: boolean;
     profit_margin?: number;
     exchange_rate?: number;
+    // New: both Toreca sources
+    toreca_match?: TorecaMatch;
   };
 }
 
@@ -117,37 +121,90 @@ export function ArbitrageCard({ card }: ArbitrageCardProps) {
             </p>
           </div>
 
-          {/* Toreca Price */}
-          {hasTorecaData && (
-            <div className="bg-white/5 rounded-lg p-2">
-              <div className="flex justify-between items-center mb-1">
-                <p className="text-xs text-purple-300">Japan-Toreca (Buy)</p>
-                {card.toreca_in_stock ? (
-                  <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
-                    In Stock
-                  </span>
-                ) : (
-                  <span className="text-xs bg-gray-500/20 text-gray-300 px-2 py-0.5 rounded">
-                    Out of Stock
-                  </span>
-                )}
-              </div>
-              <div className="flex justify-between items-baseline">
-                <p className="text-lg font-bold text-blue-400">
-                  {formatJPY(card.toreca_jpy!)}
-                </p>
-                <p className="text-sm text-blue-300">
-                  ≈ {formatPrice(card.toreca_usd!)}
-                </p>
-              </div>
-            </div>
+          {/* Both Toreca Sources */}
+          {hasTorecaData && card.toreca_match && (
+            <>
+              {/* Japan-Toreca */}
+              {card.toreca_match.japanToreca && (
+                <div className={`bg-white/5 rounded-lg p-2 border-l-2 ${
+                  card.toreca_match.lowestSource === 'japan-toreca' 
+                    ? 'border-yellow-400' 
+                    : 'border-transparent'
+                }`}>
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center gap-1">
+                      <p className="text-xs text-purple-300">Japan-Toreca</p>
+                      {card.toreca_match.lowestSource === 'japan-toreca' && (
+                        <span className="text-xs bg-yellow-500/20 text-yellow-300 px-1 rounded">
+                          LOWEST
+                        </span>
+                      )}
+                    </div>
+                    {card.toreca_match.japanToreca.in_stock ? (
+                      <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
+                        In Stock
+                      </span>
+                    ) : (
+                      <span className="text-xs bg-gray-500/20 text-gray-300 px-2 py-0.5 rounded">
+                        Out
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex justify-between items-baseline">
+                    <p className="text-lg font-bold text-blue-400">
+                      {formatJPY(card.toreca_match.japanToreca.price_jpy)}
+                    </p>
+                    <p className="text-sm text-blue-300">
+                      ≈ {formatPrice(convertJPYtoUSD(card.toreca_match.japanToreca.price_jpy, card.exchange_rate!))}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Torecacamp */}
+              {card.toreca_match.torecacamp && (
+                <div className={`bg-white/5 rounded-lg p-2 border-l-2 ${
+                  card.toreca_match.lowestSource === 'torecacamp' 
+                    ? 'border-yellow-400' 
+                    : 'border-transparent'
+                }`}>
+                  <div className="flex justify-between items-center mb-1">
+                    <div className="flex items-center gap-1">
+                      <p className="text-xs text-purple-300">Torecacamp</p>
+                      {card.toreca_match.lowestSource === 'torecacamp' && (
+                        <span className="text-xs bg-yellow-500/20 text-yellow-300 px-1 rounded">
+                          LOWEST
+                        </span>
+                      )}
+                    </div>
+                    {card.toreca_match.torecacamp.in_stock ? (
+                      <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
+                        In Stock
+                      </span>
+                    ) : (
+                      <span className="text-xs bg-gray-500/20 text-gray-300 px-2 py-0.5 rounded">
+                        Out
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex justify-between items-baseline">
+                    <p className="text-lg font-bold text-blue-400">
+                      {formatJPY(card.toreca_match.torecacamp.price_jpy)}
+                    </p>
+                    <p className="text-sm text-blue-300">
+                      ≈ {formatPrice(convertJPYtoUSD(card.toreca_match.torecacamp.price_jpy, card.exchange_rate!))}
+                    </p>
+                  </div>
+                </div>
+              )}
+            </>
           )}
 
           {/* No Toreca Data */}
           {!hasTorecaData && (
             <div className="bg-white/5 rounded-lg p-2 text-center">
               <p className="text-xs text-gray-400">
-                No Toreca price available
+                No Toreca prices available
               </p>
             </div>
           )}
@@ -176,15 +233,30 @@ export function ArbitrageCard({ card }: ArbitrageCardProps) {
             TCGPlayer →
           </a>
 
-          {hasTorecaData && card.toreca_url && (
-            <a
-              href={card.toreca_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg transition-colors font-medium text-sm"
-            >
-              Buy on Toreca →
-            </a>
+          {/* Toreca Source Buttons */}
+          {hasTorecaData && card.toreca_match && (
+            <>
+              {card.toreca_match.japanToreca && (
+                <a
+                  href={card.toreca_match.japanToreca.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg transition-colors font-medium text-sm"
+                >
+                  Buy on Japan-Toreca →
+                </a>
+              )}
+              {card.toreca_match.torecacamp && (
+                <a
+                  href={card.toreca_match.torecacamp.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white text-center py-2 rounded-lg transition-colors font-medium text-sm"
+                >
+                  Buy on Torecacamp →
+                </a>
+              )}
+            </>
           )}
         </div>
 
