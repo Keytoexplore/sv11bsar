@@ -9,7 +9,7 @@ interface FilterBarProps {
 }
 
 export interface FilterState {
-  set: 'all' | 'blackbolt' | 'whiteflare';
+  set: 'all' | 'blackbolt' | 'whiteflare' | 'm3';
   rarity: 'all' | 'SAR' | 'AR' | 'SR';
   minPrice: number;
   maxPrice: number;
@@ -67,11 +67,12 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
           <select
             value={filters.set}
             onChange={(e) => updateFilter('set', e.target.value)}
-            className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 [&>option]:text-black [&>option]:bg-white"
           >
             <option value="all">All Sets</option>
             <option value="blackbolt">Black Bolt (SV11B)</option>
             <option value="whiteflare">White Flare (SV11W)</option>
+            <option value="m3">M3: Nihil Zero</option>
           </select>
         </div>
 
@@ -83,7 +84,7 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
           <select
             value={filters.rarity}
             onChange={(e) => updateFilter('rarity', e.target.value)}
-            className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 [&>option]:text-black [&>option]:bg-white"
           >
             <option value="all">All Rarities</option>
             <option value="SAR">Special Art Rare (SAR)</option>
@@ -100,7 +101,7 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
           <select
             value={filters.sortBy}
             onChange={(e) => updateFilter('sortBy', e.target.value)}
-            className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 [&>option]:text-black [&>option]:bg-white"
           >
             <option value="profit">💰 Profit Margin (Best First)</option>
             <option value="price-desc">Price: High to Low</option>
@@ -184,7 +185,7 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
               <select
                 value={filters.stockStatus}
                 onChange={(e) => updateFilter('stockStatus', e.target.value)}
-                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 [&>option]:text-black [&>option]:bg-white"
               >
                 <option value="all">All Cards</option>
                 <option value="in-stock">In Stock Only</option>

@@ -31,6 +31,7 @@ export function filterAndSortCards(cards: Card[], filters: FilterState): Card[] 
         const setName = card.setName.toLowerCase();
         if (filters.set === 'blackbolt' && !setName.includes('black bolt')) return false;
         if (filters.set === 'whiteflare' && !setName.includes('white flare')) return false;
+        if (filters.set === 'm3' && !setName.includes('m3')) return false;
       }
 
       // Rarity filter
