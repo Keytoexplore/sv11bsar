@@ -1,0 +1,198 @@
+🕷️  Toreca Scraper Starting...
+
+Target: A- condition SAR/AR/SR cards from SV11B & SV11W
+
+📦 Scraping SV11B...
+  Fetching page 1: https://shop.japan-toreca.com/search?q=SV11B&page=1
+  Fetching page 2: https://shop.japan-toreca.com/search?q=SV11B&page=2
+  Fetching page 3: https://shop.japan-toreca.com/search?q=SV11B&page=3
+  Fetching page 4: https://shop.japan-toreca.com/search?q=SV11B&page=4
+  Fetching page 5: https://shop.japan-toreca.com/search?q=SV11B&page=5
+  Fetching page 6: https://shop.japan-toreca.com/search?q=SV11B&page=6
+  Fetching page 7: https://shop.japan-toreca.com/search?q=SV11B&page=7
+  Fetching page 8: https://shop.japan-toreca.com/search?q=SV11B&page=8
+  Fetching page 9: https://shop.japan-toreca.com/search?q=SV11B&page=9
+  Fetching page 10: https://shop.japan-toreca.com/search?q=SV11B&page=10
+  Fetching page 11: https://shop.japan-toreca.com/search?q=SV11B&page=11
+  Fetching page 12: https://shop.japan-toreca.com/search?q=SV11B&page=12
+  Fetching page 13: https://shop.japan-toreca.com/search?q=SV11B&page=13
+  Fetching page 14: https://shop.japan-toreca.com/search?q=SV11B&page=14
+  Fetching page 15: https://shop.japan-toreca.com/search?q=SV11B&page=15
+  Fetching page 16: https://shop.japan-toreca.com/search?q=SV11B&page=16
+  Found 84 A- condition products
+  [1/84] pokemon-215303-a-damaged
+      ✓ 116/086 AR ¥600
+  [2/84] pokemon-215299-a-damaged
+      ✓ 112/086 AR ¥450
+  [3/84] pokemon-215297-a-damaged
+      ✓ 110/086 AR ¥450
+  [4/84] pokemon-215302-a-damaged
+      ✓ 115/086 AR ¥350
+  [5/84] pokemon-215306-a-damaged
+      ✓ 119/086 AR ¥450
+  [6/84] pokemon-215321-a-damaged
+      ✓ 134/086 AR ¥450
+  [7/84] pokemon-215308-a-damaged
+      ✓ 121/086 AR ¥450
+  [8/84] pokemon-215353-a-damaged
+      ✓ 166/086 SR ¥250
+  [9/84] pokemon-215337-a-damaged
+      ✓ 150/086 AR ¥500
+  [10/84] pokemon-215325-a-damaged
+      ✓ 138/086 AR ¥450
+  [11/84] pokemon-215315-a-damaged
+      ✓ 128/086 AR ¥400
+  [12/84] pokemon-215316-a-damaged
+      ✓ 129/086 AR ¥400
+  [13/84] pokemon-215314-a-damaged
+      ✓ 127/086 AR ¥450
+  [14/84] pokemon-215292-a-damaged
+      ✓ 105/086 AR ¥450
+  [15/84] pokemon-215278-a-damaged
+      ✓ 091/086 AR ¥450
+  [16/84] pokemon-215338-a-damaged
+      ✓ 151/086 AR ¥450
+  [17/84] pokemon-215290-a-damaged
+      ✓ 103/086 AR ¥400
+  [18/84] pokemon-215326-a-damaged
+      ✓ 139/086 AR ¥350
+  [19/84] pokemon-215340-a-damaged
+      ✓ 153/086 AR ¥500
+  [20/84] pokemon-215310-a-damaged
+      ✓ 123/086 AR ¥1800
+  [21/84] pokemon-215294-a-damaged
+      ✓ 107/086 AR ¥450
+  [22/84] pokemon-215281-a-damaged
+      ✓ 094/086 AR ¥600
+  [23/84] pokemon-215328-a-damaged
+      ✓ 141/086 AR ¥450
+  [24/84] pokemon-215311-a-damaged
+      ✓ 124/086 AR ¥450
+  [25/84] pokemon-215343-a-damaged
+      ✓ 156/086 AR ¥550
+  [26/84] pokemon-215313-a-damaged
+      ✓ 126/086 AR ¥450
+  [27/84] pokemon-215287-a-damaged
+      ✓ 100/086 AR ¥450
+  [28/84] pokemon-215277-a-damaged
+      ✓ 090/086 AR ¥350
+  [29/84] pokemon-215280-a-damaged
+      ✓ 093/086 AR ¥450
+  [30/84] pokemon-215319-a-damaged
+      ✓ 132/086 AR ¥450
+  [31/84] pokemon-215342-a-damaged
+      ✓ 155/086 AR ¥450
+  [32/84] pokemon-215285-a-damaged
+      ✓ 098/086 AR ¥450
+  [33/84] pokemon-215291-a-damaged
+      ✓ 104/086 AR ¥850
+  [34/84] pokemon-215288-a-damaged
+      ✓ 101/086 AR ¥450
+  [35/84] pokemon-215318-a-damaged
+      ✓ 131/086 AR ¥450
+  [36/84] pokemon-215275-a-damaged
+      ✓ 088/086 AR ¥600
+  [37/84] pokemon-215317-a-damaged
+      ✓ 130/086 AR ¥350
+  [38/84] pokemon-215336-a-damaged
+      ✓ 149/086 AR ¥500
+  [39/84] pokemon-215335-a-damaged
+      ✓ 148/086 AR ¥450
+  [40/84] pokemon-215293-a-damaged
+      ✓ 106/086 AR ¥450
+  [41/84] pokemon-215309-a-damaged
+      ✓ 122/086 AR ¥350
+  [42/84] pokemon-215345-a-damaged
+      ✓ 158/086 AR ¥600
+  [43/84] pokemon-215341-a-damaged
+      ✓ 154/086 AR ¥550
+  [44/84] pokemon-215330-a-damaged
+      ✓ 143/086 AR ¥500
+  [45/84] pokemon-215296-a-damaged
+      ✓ 109/086 AR ¥7100
+  [46/84] pokemon-215279-a-damaged
+      ✓ 092/086 AR ¥600
+  [47/84] pokemon-215284-a-damaged
+      ✓ 097/086 AR ¥1600
+  [48/84] pokemon-215323-a-damaged
+      ✓ 136/086 AR ¥350
+  [49/84] pokemon-215333-a-damaged
+      ✓ 146/086 AR ¥450
+  [50/84] pokemon-215289-a-damaged
+      ✓ 102/086 AR ¥950
+  [51/84] pokemon-215344-a-damaged
+      ✓ 157/086 AR ¥600
+  [52/84] pokemon-215339-a-damaged
+      ✓ 152/086 AR ¥500
+  [53/84] pokemon-215327-a-damaged
+      ✓ 140/086 AR ¥450
+  [54/84] pokemon-215300-a-damaged
+      ✓ 113/086 AR ¥600
+  [55/84] pokemon-215301-a-damaged
+      ✓ 114/086 AR ¥450
+  [56/84] pokemon-215305-a-damaged
+      ✓ 118/086 AR ¥850
+  [57/84] pokemon-215334-a-damaged
+      ✓ 147/086 AR ¥450
+  [58/84] pokemon-215295-a-damaged
+      ✓ 108/086 AR ¥500
+  [59/84] pokemon-215283-a-damaged
+      ✓ 096/086 AR ¥500
+  [60/84] pokemon-215307-a-damaged
+      ✓ 120/086 AR ¥400
+  [61/84] pokemon-215320-a-damaged
+      ✓ 133/086 AR ¥500
+  [62/84] pokemon-215324-a-damaged
+      ✓ 137/086 AR ¥450
+  [63/84] pokemon-215331-a-damaged
+      ✓ 144/086 AR ¥450
+  [64/84] pokemon-215312-a-damaged
+      ✓ 125/086 AR ¥500
+  [65/84] pokemon-215352-a-damaged
+      ✓ 165/086 SR ¥650
+  [66/84] pokemon-215348-a-damaged
+      ✓ 161/086 SR ¥450
+  [67/84] pokemon-215347-a-damaged
+      ✓ 160/086 SR ¥250
+  [68/84] pokemon-215355-a-damaged
+      ✓ 168/086 SAR ¥3300
+  [69/84] pokemon-215357-a-damaged
+      ✓ 170/086 SAR ¥2100
+  [70/84] pokemon-215358-a-damaged
+      ✓ 171/086 SAR ¥700
+  [71/84] pokemon-215346-a-damaged
+      ✓ 159/086 SR ¥250
+  [72/84] pokemon-215298-a-damaged
+      ✓ 111/086 AR ¥250
+  [73/84] pokemon-215276-a-damaged
+      ✓ 089/086 AR ¥350
+  [74/84] pokemon-215274-a-damaged
+      ✓ 087/086 AR ¥800
+  [75/84] pokemon-215332-a-damaged
+      ✓ 145/086 AR ¥250
+  [76/84] pokemon-215322-a-damaged
+      ✓ 135/086 AR ¥600
+  [77/84] pokemon-215304-a-damaged
+      ✓ 117/086 AR ¥1000
+  [78/84] pokemon-215329-a-damaged
+      ✓ 142/086 AR ¥250
+  [79/84] pokemon-215286-a-damaged
+      ✓ 099/086 AR ¥350
+  [80/84] pokemon-215360-a-damaged
+      ✓ 173/086 SAR ¥5300
+  [81/84] pokemon-215356-a-damaged
+      ✓ 169/086 SAR ¥19000
+  [82/84] pokemon-215350-a-damaged
+      ✓ 163/086 SR ¥200
+  [83/84] pokemon-215349-a-damaged
+      ✓ 162/086 SR ¥200
+  [84/84] pokemon-215354-a-damaged
+      ✓ 167/086 SAR ¥2300
+
+📦 Scraping SV11W...
+  Fetching page 1: https://shop.japan-toreca.com/search?q=SV11W&page=1
+  Fetching page 2: https://shop.japan-toreca.com/search?q=SV11W&page=2
+  Fetching page 3: https://shop.japan-toreca.com/search?q=SV11W&page=3
+  Fetching page 4: https://shop.japan-toreca.com/search?q=SV11W&page=4
+  Fetching page 5: https://shop.japan-toreca.com/search?q=SV11W&page=5
+  Fetching page 6: https://shop.japan-toreca.com/search?q=SV11W&page=6

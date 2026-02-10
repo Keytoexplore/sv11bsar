@@ -1,5 +1,11 @@
-import { CardGrid } from '@/components/CardGrid';
 import { RefreshButton } from '@/components/RefreshButton';
+import {
+  getExchangeRate,
+  loadTorecaPrices,
+  matchTorecaPrice,
+  calculateProfitMargin,
+  convertJPYtoUSD,
+} from '@/lib/arbitrage';
 
 type RarityType = 'Special Art Rare' | 'Art Rare' | 'Super Rare';
 
@@ -90,7 +96,45 @@ async function getAllCards() {
       planRestrictions: allData[0].metadata.planRestrictions
     };
 
-    return { data: combinedCards, metadata: combinedMetadata, error: null };
+    // Integrate Toreca prices and calculate arbitrage
+    const [torecaPrices, exchangeRate] = await Promise.all([
+      loadTorecaPrices(),
+      getExchangeRate(),
+    ]);
+
+    const cardsWithArbitrage = combinedCards.map((card) => {
+      const torecaMatch = matchTorecaPrice(card.setName, card.cardNumber, torecaPrices);
+
+      if (torecaMatch) {
+        const torecaUSD = convertJPYtoUSD(torecaMatch.price_jpy, exchangeRate);
+        const profitMargin = calculateProfitMargin(
+          card.prices.market,
+          torecaMatch.price_jpy,
+          exchangeRate
+        );
+
+        return {
+          ...card,
+          toreca_jpy: torecaMatch.price_jpy,
+          toreca_usd: torecaUSD,
+          toreca_url: torecaMatch.url,
+          toreca_in_stock: torecaMatch.in_stock,
+          profit_margin: profitMargin,
+          exchange_rate: exchangeRate,
+        };
+      }
+
+      return card;
+    });
+
+    // Sort by profit margin (descending) by default
+    cardsWithArbitrage.sort((a, b) => {
+      if (a.profit_margin === undefined) return 1;
+      if (b.profit_margin === undefined) return -1;
+      return b.profit_margin - a.profit_margin;
+    });
+
+    return { data: cardsWithArbitrage, metadata: combinedMetadata, error: null };
   } catch (error) {
     console.error('Fetch error:', error);
     return { data: [], metadata: null, error: 'Network error' };

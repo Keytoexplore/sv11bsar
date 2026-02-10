@@ -25,7 +25,7 @@ export function filterAndSortCards(cards: Card[], filters: FilterState): Card[] 
   );
   
   return uniqueCards
-    .filter((card) => {
+    .filter((card: any) => {
       // Set filter
       if (filters.set !== 'all') {
         const setName = card.setName.toLowerCase();
@@ -45,6 +45,17 @@ export function filterAndSortCards(cards: Card[], filters: FilterState): Card[] 
         return false;
       }
 
+      // Profit margin filter
+      if (filters.minProfit > 0 && card.profit_margin !== undefined) {
+        if (card.profit_margin < filters.minProfit) return false;
+      }
+
+      // Stock status filter
+      if (filters.stockStatus !== 'all' && card.toreca_in_stock !== undefined) {
+        if (filters.stockStatus === 'in-stock' && !card.toreca_in_stock) return false;
+        if (filters.stockStatus === 'out-of-stock' && card.toreca_in_stock) return false;
+      }
+
       // Search term filter
       if (filters.searchTerm) {
         const search = filters.searchTerm.toLowerCase();
@@ -55,8 +66,13 @@ export function filterAndSortCards(cards: Card[], filters: FilterState): Card[] 
 
       return true;
     })
-    .sort((a, b) => {
+    .sort((a: any, b: any) => {
       switch (filters.sortBy) {
+        case 'profit':
+          // Sort by profit margin (undefined/null last)
+          if (a.profit_margin === undefined) return 1;
+          if (b.profit_margin === undefined) return -1;
+          return b.profit_margin - a.profit_margin;
         case 'price-desc':
           return b.prices.market - a.prices.market;
         case 'price-asc':

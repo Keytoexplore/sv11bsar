@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { FilterBar, FilterState } from './FilterBar';
-import { CardGrid } from './CardGrid';
+import { ArbitrageCardGrid } from './ArbitrageCardGrid';
 import { filterAndSortCards, Card } from '@/lib/filterCards';
 
 interface CardsWithFiltersProps {
@@ -16,7 +16,9 @@ export function CardsWithFilters({ initialCards, totalCards }: CardsWithFiltersP
     rarity: 'all',
     minPrice: 0,
     maxPrice: 10000,
-    sortBy: 'price-desc',
+    minProfit: 0,
+    stockStatus: 'all',
+    sortBy: 'profit',
     searchTerm: '',
   });
 
@@ -35,7 +37,7 @@ export function CardsWithFilters({ initialCards, totalCards }: CardsWithFiltersP
         totalCards={totalCards}
         filteredCount={filteredCards.length}
       />
-      <CardGrid cards={filteredCards} />
+      <ArbitrageCardGrid cards={filteredCards} />
       {filteredCards.length === 0 && (
         <div className="text-center py-20">
           <div className="text-6xl mb-4">🔍</div>

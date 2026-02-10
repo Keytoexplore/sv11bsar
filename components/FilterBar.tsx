@@ -13,7 +13,9 @@ export interface FilterState {
   rarity: 'all' | 'SAR' | 'AR' | 'SR';
   minPrice: number;
   maxPrice: number;
-  sortBy: 'price-desc' | 'price-asc' | 'name' | 'number';
+  minProfit: number;
+  stockStatus: 'all' | 'in-stock' | 'out-of-stock';
+  sortBy: 'price-desc' | 'price-asc' | 'name' | 'number' | 'profit';
   searchTerm: string;
 }
 
@@ -23,7 +25,9 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
     rarity: 'all',
     minPrice: 0,
     maxPrice: 10000,
-    sortBy: 'price-desc',
+    minProfit: 0,
+    stockStatus: 'all',
+    sortBy: 'profit',
     searchTerm: '',
   });
 
@@ -98,6 +102,7 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
             onChange={(e) => updateFilter('sortBy', e.target.value)}
             className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
           >
+            <option value="profit">💰 Profit Margin (Best First)</option>
             <option value="price-desc">Price: High to Low</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="name">Name (A-Z)</option>
@@ -119,37 +124,73 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
-        {showAdvanced ? 'Hide' : 'Show'} Price Range
+        {showAdvanced ? 'Hide' : 'Show'} Advanced Filters
       </button>
 
       {/* Advanced Filters */}
       {showAdvanced && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-white/20">
-          <div>
-            <label className="block text-sm font-medium text-purple-200 mb-2">
-              Min Price ($)
-            </label>
-            <input
-              type="number"
-              value={filters.minPrice}
-              onChange={(e) => updateFilter('minPrice', parseFloat(e.target.value) || 0)}
-              className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-              min="0"
-              step="0.01"
-            />
+        <div className="space-y-4 pt-4 border-t border-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Min Price ($)
+              </label>
+              <input
+                type="number"
+                value={filters.minPrice}
+                onChange={(e) => updateFilter('minPrice', parseFloat(e.target.value) || 0)}
+                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                min="0"
+                step="0.01"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Max Price ($)
+              </label>
+              <input
+                type="number"
+                value={filters.maxPrice}
+                onChange={(e) => updateFilter('maxPrice', parseFloat(e.target.value) || 10000)}
+                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                min="0"
+                step="0.01"
+              />
+            </div>
           </div>
-          <div>
-            <label className="block text-sm font-medium text-purple-200 mb-2">
-              Max Price ($)
-            </label>
-            <input
-              type="number"
-              value={filters.maxPrice}
-              onChange={(e) => updateFilter('maxPrice', parseFloat(e.target.value) || 10000)}
-              className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-              min="0"
-              step="0.01"
-            />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Min Profit Margin (%)
+              </label>
+              <input
+                type="number"
+                value={filters.minProfit}
+                onChange={(e) => updateFilter('minProfit', parseFloat(e.target.value) || 0)}
+                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                min="0"
+                max="1000"
+                step="5"
+              />
+              <p className="text-xs text-purple-400 mt-1">
+                Only show cards with {filters.minProfit}%+ profit
+              </p>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Stock Status
+              </label>
+              <select
+                value={filters.stockStatus}
+                onChange={(e) => updateFilter('stockStatus', e.target.value)}
+                className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              >
+                <option value="all">All Cards</option>
+                <option value="in-stock">In Stock Only</option>
+                <option value="out-of-stock">Out of Stock Only</option>
+              </select>
+            </div>
           </div>
         </div>
       )}
@@ -169,7 +210,9 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
               rarity: 'all',
               minPrice: 0,
               maxPrice: 10000,
-              sortBy: 'price-desc',
+              minProfit: 0,
+              stockStatus: 'all',
+              sortBy: 'profit',
               searchTerm: '',
             });
           }}
