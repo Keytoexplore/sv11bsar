@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const SETS = ['SV11B', 'SV11W', 'M3'];
+const SETS = ['SV11B', 'SV11W', 'M3', 'M2a'];
 const BASE_URL = 'https://shop.japan-toreca.com';
 const DELAY_MS = 1500; // Be nice to their server
 

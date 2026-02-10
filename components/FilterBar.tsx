@@ -9,7 +9,7 @@ interface FilterBarProps {
 }
 
 export interface FilterState {
-  set: 'all' | 'blackbolt' | 'whiteflare' | 'm3';
+  set: 'all' | 'blackbolt' | 'whiteflare' | 'm3' | 'm2a';
   rarity: 'all' | 'SAR' | 'AR' | 'SR';
   minPrice: number;
   maxPrice: number;
@@ -73,6 +73,7 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
             <option value="blackbolt">Black Bolt (SV11B)</option>
             <option value="whiteflare">White Flare (SV11W)</option>
             <option value="m3">M3: Nihil Zero</option>
+            <option value="m2a">M2a: High Class Pack MEGA Dream ex</option>
           </select>
         </div>
 
