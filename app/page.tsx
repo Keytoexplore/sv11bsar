@@ -25,7 +25,7 @@ async function getCardsForSet(apiKey: string, setName: string, rarity: RarityTyp
       headers: {
         'Authorization': `Bearer ${apiKey}`,
       },
-      next: { revalidate: 3600 }
+      next: { revalidate: 259200 } // 3 days = 259200 seconds
     }
   );
 }
