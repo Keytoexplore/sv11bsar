@@ -9,33 +9,87 @@ async function getSARCards() {
   }
 
   try {
-    const response = await fetch(
-      'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
-        language: 'japanese',
-        search: 'Black Bolt',
-        rarity: 'Special Art Rare',
-        limit: '50',
-        includeHistory: 'true',
-        days: '30',
-        sortBy: 'price',
-        sortOrder: 'desc'
-      }),
-      {
-        headers: {
-          'Authorization': `Bearer ${apiKey}`,
-        },
-        next: { revalidate: 3600 } // Revalidate every hour
-      }
-    );
+    // Fetch both Black Bolt (SV11B) and White Flare (SV11W) SAR cards
+    const [blackBoltResponse, whiteFlareResponse] = await Promise.all([
+      fetch(
+        'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
+          language: 'japanese',
+          search: 'Black Bolt',
+          rarity: 'Special Art Rare',
+          limit: '50',
+          includeHistory: 'true',
+          days: '30',
+          sortBy: 'price',
+          sortOrder: 'desc'
+        }),
+        {
+          headers: {
+            'Authorization': `Bearer ${apiKey}`,
+          },
+          next: { revalidate: 3600 }
+        }
+      ),
+      fetch(
+        'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
+          language: 'japanese',
+          search: 'White Flare',
+          rarity: 'Special Art Rare',
+          limit: '50',
+          includeHistory: 'true',
+          days: '30',
+          sortBy: 'price',
+          sortOrder: 'desc'
+        }),
+        {
+          headers: {
+            'Authorization': `Bearer ${apiKey}`,
+          },
+          next: { revalidate: 3600 }
+        }
+      )
+    ]);
 
-    if (!response.ok) {
-      const error = await response.json();
+    if (!blackBoltResponse.ok || !whiteFlareResponse.ok) {
+      const error = !blackBoltResponse.ok 
+        ? await blackBoltResponse.json() 
+        : await whiteFlareResponse.json();
       console.error('API Error:', error);
       return { data: [], metadata: null, error: error.error || 'Failed to fetch' };
     }
 
-    const result = await response.json();
-    return result;
+    const blackBoltData = await blackBoltResponse.json();
+    const whiteFlareData = await whiteFlareResponse.json();
+
+    // Combine cards from both sets
+    const combinedCards = [...blackBoltData.data, ...whiteFlareData.data]
+      .sort((a, b) => b.prices.market - a.prices.market); // Sort by price descending
+
+    // Combine metadata
+    const combinedMetadata = {
+      total: blackBoltData.metadata.total + whiteFlareData.metadata.total,
+      count: combinedCards.length,
+      limit: 100,
+      offset: 0,
+      hasMore: blackBoltData.metadata.hasMore || whiteFlareData.metadata.hasMore,
+      language: 'japanese',
+      includes: blackBoltData.metadata.includes,
+      historyWindow: blackBoltData.metadata.historyWindow,
+      apiCallsConsumed: {
+        total: (blackBoltData.metadata.apiCallsConsumed?.total || 0) + 
+               (whiteFlareData.metadata.apiCallsConsumed?.total || 0),
+        breakdown: {
+          cards: (blackBoltData.metadata.apiCallsConsumed?.breakdown?.cards || 0) +
+                 (whiteFlareData.metadata.apiCallsConsumed?.breakdown?.cards || 0),
+          history: (blackBoltData.metadata.apiCallsConsumed?.breakdown?.history || 0) +
+                   (whiteFlareData.metadata.apiCallsConsumed?.breakdown?.history || 0),
+          ebay: 0
+        },
+        costPerCard: 1
+      },
+      planRestrictions: blackBoltData.metadata.planRestrictions
+    };
+
+    return { data: combinedCards, metadata: combinedMetadata, error: null };
   } catch (error) {
     console.error('Fetch error:', error);
     return { data: [], metadata: null, error: 'Network error' };
@@ -51,10 +105,10 @@ export default async function Home() {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-4xl font-bold text-white mb-2">
-              SV11B Black Bolt - SAR Cards
+              SV11B & SV11W SAR Cards
             </h1>
             <p className="text-purple-200">
-              Special Art Rare price tracker
+              Black Bolt & White Flare - Special Art Rare price tracker
             </p>
           </div>
           <RefreshButton />
