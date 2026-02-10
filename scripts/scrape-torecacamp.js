@@ -42,51 +42,86 @@ function extractCardData(html, url) {
   const setCode = setMatch[1].toUpperCase();
   const rarity = rarityMatch[1];
   
-  // Extract A- price from radio buttons
+  // Extract price from JSON-LD structured data
+  // Priority: A- first, then fallback to B if A- not available
   let priceAMinus = null;
   let inStock = false;
+  let conditionUsed = null;
   
-  // Look for radio button group containing conditions
-  $('input[type="radio"]').each((i, elem) => {
-    const $radio = $(elem);
-    const $label = $radio.next();
-    const labelText = $label.text().trim();
-    
-    // Look for 【状態A-】 condition
-    if (labelText.includes('【状態A-】') || labelText.includes('状態A-')) {
-      // Price is in a sibling element or nearby
-      const priceText = $label.find('*').text() || $label.parent().text();
-      const priceMatch = priceText.match(/¥\s*([\d,]+)/);
+  // Method 1: Parse JSON-LD
+  $('script[type="application/ld+json"]').each((i, elem) => {
+    try {
+      const jsonText = $(elem).html();
+      const jsonData = JSON.parse(jsonText);
       
-      if (priceMatch) {
-        priceAMinus = parseInt(priceMatch[1].replace(/,/g, ''));
+      // Handle both single product and array of products
+      const offers = Array.isArray(jsonData) ? jsonData.flatMap(item => item.offers || []) : (jsonData.offers || []);
+      
+      // First priority: Look for A-
+      for (const offer of offers) {
+        if (offer.name && offer.name.includes('【状態A-】')) {
+          priceAMinus = Math.round(parseFloat(offer.price));
+          inStock = offer.availability && !offer.availability.includes('OutOfStock');
+          conditionUsed = 'A-';
+          break;
+        }
       }
       
-      // Check if it's sold out
-      const isSoldOut = labelText.includes('Sold Out') || labelText.includes('売り切れ') || labelText.includes('在庫なし');
-      inStock = !isSoldOut;
+      // Fallback: If no A-, use B
+      if (!priceAMinus) {
+        for (const offer of offers) {
+          if (offer.name && offer.name.includes('【状態B】')) {
+            priceAMinus = Math.round(parseFloat(offer.price));
+            inStock = offer.availability && !offer.availability.includes('OutOfStock');
+            conditionUsed = 'B';
+            break;
+          }
+        }
+      }
+    } catch (e) {
+      // Ignore JSON parse errors
     }
   });
   
-  // Alternative: Look in radiogroup with aria structure
+  // Method 2: Parse Shopify Analytics meta data (if Method 1 failed)
   if (!priceAMinus) {
-    $('[role="radiogroup"] [role="radio"]').each((i, elem) => {
-      const $radio = $(elem);
-      const text = $radio.text();
-      
-      if (text.includes('【状態A-】')) {
-        const priceMatch = text.match(/¥\s*([\d,]+)/);
-        if (priceMatch) {
-          priceAMinus = parseInt(priceMatch[1].replace(/,/g, ''));
-          const isSoldOut = text.includes('Sold Out') || text.includes('売り切れ');
-          inStock = !isSoldOut;
+    const scriptText = $('body').html();
+    const metaMatch = scriptText.match(/window\.ShopifyAnalytics\.meta\s*=\s*({[\s\S]*?});/);
+    
+    if (metaMatch) {
+      try {
+        const metaData = JSON.parse(metaMatch[1]);
+        if (metaData.product && metaData.product.variants) {
+          // Try A- first
+          let variant = metaData.product.variants.find(v => 
+            v.public_title && v.public_title.includes('【状態A-】')
+          );
+          
+          if (variant) {
+            priceAMinus = Math.round(variant.price / 100);
+            inStock = true;
+            conditionUsed = 'A-';
+          } else {
+            // Fallback to B
+            variant = metaData.product.variants.find(v => 
+              v.public_title && v.public_title.includes('【状態B】')
+            );
+            
+            if (variant) {
+              priceAMinus = Math.round(variant.price / 100);
+              inStock = true;
+              conditionUsed = 'B';
+            }
+          }
         }
+      } catch (e) {
+        // Ignore parse errors
       }
-    });
+    }
   }
   
   if (!priceAMinus) {
-    console.log(`  ⚠️  No A- price found for: ${title}`);
+    console.log(`  ⚠️  No A- or B price found for: ${title}`);
     return null;
   }
   
@@ -95,6 +130,7 @@ function extractCardData(html, url) {
     setCode,
     rarity,
     price_jpy: priceAMinus,
+    condition: conditionUsed, // 'A-' or 'B'
     in_stock: inStock,
     last_updated: new Date().toISOString(),
     url
@@ -178,7 +214,7 @@ async function scrapeAllCards() {
         
         if (cardData) {
           allCards.push(cardData);
-          console.log(`     ✅ ${cardData.cardNumber} ${cardData.rarity} - ¥${cardData.price_jpy} (${cardData.in_stock ? 'In Stock' : 'Sold Out'})`);
+          console.log(`     ✅ ${cardData.cardNumber} ${cardData.rarity} - ¥${cardData.price_jpy} [${cardData.condition}] (${cardData.in_stock ? 'In Stock' : 'Sold Out'})`);
         }
         
         await sleep(DELAY_MS);
