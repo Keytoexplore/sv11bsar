@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 interface FilterBarProps {
-  onFilterChange: (filters: FilterState) => void;
+  onApplyFilters: (filters: FilterState) => void;
   totalCards: number;
   filteredCount: number;
 }
@@ -30,9 +30,11 @@ export function FilterBar({ onFilterChange, totalCards, filteredCount }: FilterB
   const [showAdvanced, setShowAdvanced] = useState(false);
 
   const updateFilter = (key: keyof FilterState, value: any) => {
-    const newFilters = { ...filters, [key]: value };
-    setFilters(newFilters);
-    onFilterChange(newFilters);
+    setFilters({ ...filters, [key]: value });
+  };
+
+  const applyFilters = () => {
+    onApplyFilters(filters);
   };
 
   return (
@@ -152,8 +154,33 @@ export function FilterBar({ onFilterChange, totalCards, filteredCount }: FilterB
         </div>
       )}
 
+      {/* Action Buttons */}
+      <div className="flex gap-3 pt-4 border-t border-white/20">
+        <button
+          onClick={applyFilters}
+          className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
+        >
+          Apply Filters
+        </button>
+        <button
+          onClick={() => {
+            setFilters({
+              set: 'all',
+              rarity: 'all',
+              minPrice: 0,
+              maxPrice: 10000,
+              sortBy: 'price-desc',
+              searchTerm: '',
+            });
+          }}
+          className="px-4 py-3 bg-white/5 hover:bg-white/10 text-purple-200 font-medium rounded-lg transition-colors border border-white/20"
+        >
+          Reset
+        </button>
+      </div>
+
       {/* Results Summary */}
-      <div className="text-center pt-2 border-t border-white/20">
+      <div className="text-center pt-4">
         <p className="text-purple-200">
           Showing <span className="font-bold text-white">{filteredCount}</span> of{' '}
           <span className="font-bold text-white">{totalCards}</span> cards

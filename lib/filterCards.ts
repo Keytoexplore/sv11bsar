@@ -19,7 +19,12 @@ export interface Card {
 }
 
 export function filterAndSortCards(cards: Card[], filters: FilterState): Card[] {
-  return cards
+  // First, deduplicate cards by ID
+  const uniqueCards = Array.from(
+    new Map(cards.map(card => [card.id, card])).values()
+  );
+  
+  return uniqueCards
     .filter((card) => {
       // Set filter
       if (filters.set !== 'all') {

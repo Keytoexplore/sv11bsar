@@ -11,7 +11,7 @@ interface CardsWithFiltersProps {
 }
 
 export function CardsWithFilters({ initialCards, totalCards }: CardsWithFiltersProps) {
-  const [filters, setFilters] = useState<FilterState>({
+  const [appliedFilters, setAppliedFilters] = useState<FilterState>({
     set: 'all',
     rarity: 'all',
     minPrice: 0,
@@ -21,13 +21,17 @@ export function CardsWithFilters({ initialCards, totalCards }: CardsWithFiltersP
   });
 
   const filteredCards = useMemo(() => {
-    return filterAndSortCards(initialCards, filters);
-  }, [initialCards, filters]);
+    return filterAndSortCards(initialCards, appliedFilters);
+  }, [initialCards, appliedFilters]);
+
+  const handleApplyFilters = (filters: FilterState) => {
+    setAppliedFilters(filters);
+  };
 
   return (
     <>
       <FilterBar
-        onFilterChange={setFilters}
+        onApplyFilters={handleApplyFilters}
         totalCards={totalCards}
         filteredCount={filteredCards.length}
       />
