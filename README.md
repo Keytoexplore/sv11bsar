@@ -1,0 +1,143 @@
+# SV11B SAR Price Tracker
+
+A Next.js dashboard for tracking Pokemon TCG **SV11B Black Bolt** Special Art Rare (SAR) card prices.
+
+![Dashboard Preview](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
+
+## Features
+
+- 🎴 **Real-time price tracking** for all SAR cards from SV11B Black Bolt
+- 📊 **Market & low price** display
+- 🔄 **Auto-refresh** every hour (with manual refresh option)
+- 📱 **Responsive design** - works on mobile, tablet, and desktop
+- 🌙 **Dark theme** with gradient background
+- 🖼️ **High-quality card images** from TCGPlayer CDN
+- 🔗 **Direct links** to TCGPlayer for each card
+
+## Tech Stack
+
+- **Next.js 15** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Pokemon Price Tracker API** for live price data
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+- Pokemon Price Tracker API key (get yours at [pokemonpricetracker.com/api](https://www.pokemonpricetracker.com/api))
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Keytoexplore/sv11bsar.git
+cd sv11bsar
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env.local` file:
+```bash
+cp .env.local.example .env.local
+```
+
+4. Add your API key to `.env.local`:
+```
+POKEMON_API_KEY=your_api_key_here
+```
+
+5. Run the development server:
+```bash
+npm run dev
+```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Keytoexplore/sv11bsar)
+
+### Manual Deployment
+
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com) and sign in
+3. Click "New Project"
+4. Import your GitHub repository
+5. Add environment variable:
+   - Name: `POKEMON_API_KEY`
+   - Value: Your API key
+6. Click "Deploy"
+
+## Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `POKEMON_API_KEY` | Your Pokemon Price Tracker API key | Yes |
+| `NEXT_PUBLIC_APP_NAME` | App name (optional) | No |
+
+## API Rate Limits
+
+- **Free Plan**: 100 credits/day, 60 calls/minute
+- Each card costs 1 credit
+- History data costs +1 credit per card
+
+The app is optimized to stay within free tier limits with ISR (Incremental Static Regeneration) revalidating every hour.
+
+## Project Structure
+
+```
+sv11bsar/
+├── app/
+│   ├── page.tsx          # Main page with SSR data fetching
+│   ├── layout.tsx        # Root layout with metadata
+│   └── globals.css       # Global styles
+├── components/
+│   ├── Card.tsx          # Individual card component
+│   ├── CardGrid.tsx      # Grid layout for cards
+│   └── RefreshButton.tsx # Manual refresh button
+├── .env.local            # Environment variables (not in git)
+└── README.md             # This file
+```
+
+## Customization
+
+### Change Set or Rarity
+
+Edit `app/page.tsx` and modify the API parameters:
+
+```typescript
+const response = await fetch(
+  'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
+    language: 'japanese',
+    search: 'Black Bolt',           // Change set here
+    rarity: 'Special Art Rare',      // Change rarity here
+    limit: '50',
+    includeHistory: 'true',
+    days: '30',
+  }),
+  // ...
+);
+```
+
+### Adjust Refresh Interval
+
+In `app/page.tsx`, change the `revalidate` value (in seconds):
+
+```typescript
+next: { revalidate: 3600 } // 1 hour = 3600 seconds
+```
+
+## License
+
+MIT
+
+## Acknowledgments
+
+- Pokemon Price Tracker API for price data
+- TCGPlayer for card images
+- The Pokemon Company for Pokemon TCG
