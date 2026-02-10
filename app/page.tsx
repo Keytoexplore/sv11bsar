@@ -1,7 +1,30 @@
 import { CardGrid } from '@/components/CardGrid';
 import { RefreshButton } from '@/components/RefreshButton';
 
-async function getSARCards() {
+type RarityType = 'Special Art Rare' | 'Art Rare' | 'Super Rare';
+
+async function getCardsForSet(apiKey: string, setName: string, rarity: RarityType) {
+  return fetch(
+    'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
+      language: 'japanese',
+      search: setName,
+      rarity: rarity,
+      limit: '50',
+      includeHistory: 'true',
+      days: '30',
+      sortBy: 'price',
+      sortOrder: 'desc'
+    }),
+    {
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      next: { revalidate: 3600 }
+    }
+  );
+}
+
+async function getAllCards() {
   const apiKey = process.env.POKEMON_API_KEY;
   
   if (!apiKey) {
@@ -9,84 +32,62 @@ async function getSARCards() {
   }
 
   try {
-    // Fetch both Black Bolt (SV11B) and White Flare (SV11W) SAR cards
-    const [blackBoltResponse, whiteFlareResponse] = await Promise.all([
-      fetch(
-        'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
-          language: 'japanese',
-          search: 'Black Bolt',
-          rarity: 'Special Art Rare',
-          limit: '50',
-          includeHistory: 'true',
-          days: '30',
-          sortBy: 'price',
-          sortOrder: 'desc'
-        }),
-        {
-          headers: {
-            'Authorization': `Bearer ${apiKey}`,
-          },
-          next: { revalidate: 3600 }
-        }
-      ),
-      fetch(
-        'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
-          language: 'japanese',
-          search: 'White Flare',
-          rarity: 'Special Art Rare',
-          limit: '50',
-          includeHistory: 'true',
-          days: '30',
-          sortBy: 'price',
-          sortOrder: 'desc'
-        }),
-        {
-          headers: {
-            'Authorization': `Bearer ${apiKey}`,
-          },
-          next: { revalidate: 3600 }
-        }
-      )
-    ]);
+    // Fetch all combinations: 2 sets × 3 rarities = 6 requests
+    const rarities: RarityType[] = ['Special Art Rare', 'Art Rare', 'Super Rare'];
+    const sets = ['Black Bolt', 'White Flare'];
 
-    if (!blackBoltResponse.ok || !whiteFlareResponse.ok) {
-      const error = !blackBoltResponse.ok 
-        ? await blackBoltResponse.json() 
-        : await whiteFlareResponse.json();
-      console.error('API Error:', error);
-      return { data: [], metadata: null, error: error.error || 'Failed to fetch' };
+    const requests = sets.flatMap(set =>
+      rarities.map(rarity => getCardsForSet(apiKey, set, rarity))
+    );
+
+    const responses = await Promise.all(requests);
+
+    // Check for errors
+    for (const response of responses) {
+      if (!response.ok) {
+        const error = await response.json();
+        console.error('API Error:', error);
+        return { data: [], metadata: null, error: error.error || 'Failed to fetch' };
+      }
     }
 
-    const blackBoltData = await blackBoltResponse.json();
-    const whiteFlareData = await whiteFlareResponse.json();
+    const allData = await Promise.all(responses.map(r => r.json()));
 
-    // Combine cards from both sets
-    const combinedCards = [...blackBoltData.data, ...whiteFlareData.data]
-      .sort((a, b) => b.prices.market - a.prices.market); // Sort by price descending
+    // Combine all cards
+    const combinedCards = allData
+      .flatMap(data => data.data)
+      .sort((a, b) => b.prices.market - a.prices.market);
 
     // Combine metadata
+    const totalApiCalls = allData.reduce(
+      (sum, data) => sum + (data.metadata.apiCallsConsumed?.total || 0),
+      0
+    );
+
+    const totalCards = allData.reduce(
+      (sum, data) => sum + data.metadata.total,
+      0
+    );
+
     const combinedMetadata = {
-      total: blackBoltData.metadata.total + whiteFlareData.metadata.total,
+      total: totalCards,
       count: combinedCards.length,
-      limit: 100,
+      limit: 300,
       offset: 0,
-      hasMore: blackBoltData.metadata.hasMore || whiteFlareData.metadata.hasMore,
+      hasMore: allData.some(data => data.metadata.hasMore),
       language: 'japanese',
-      includes: blackBoltData.metadata.includes,
-      historyWindow: blackBoltData.metadata.historyWindow,
+      includes: allData[0].metadata.includes,
+      historyWindow: allData[0].metadata.historyWindow,
       apiCallsConsumed: {
-        total: (blackBoltData.metadata.apiCallsConsumed?.total || 0) + 
-               (whiteFlareData.metadata.apiCallsConsumed?.total || 0),
+        total: totalApiCalls,
         breakdown: {
-          cards: (blackBoltData.metadata.apiCallsConsumed?.breakdown?.cards || 0) +
-                 (whiteFlareData.metadata.apiCallsConsumed?.breakdown?.cards || 0),
-          history: (blackBoltData.metadata.apiCallsConsumed?.breakdown?.history || 0) +
-                   (whiteFlareData.metadata.apiCallsConsumed?.breakdown?.history || 0),
+          cards: totalApiCalls,
+          history: 0,
           ebay: 0
         },
         costPerCard: 1
       },
-      planRestrictions: blackBoltData.metadata.planRestrictions
+      planRestrictions: allData[0].metadata.planRestrictions
     };
 
     return { data: combinedCards, metadata: combinedMetadata, error: null };
@@ -96,8 +97,10 @@ async function getSARCards() {
   }
 }
 
+import { CardsWithFilters } from '@/components/CardsWithFilters';
+
 export default async function Home() {
-  const { data: cards, metadata, error } = await getSARCards();
+  const { data: cards, metadata, error } = await getAllCards();
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -105,10 +108,10 @@ export default async function Home() {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-4xl font-bold text-white mb-2">
-              SV11B & SV11W SAR Cards
+              SV11B & SV11W Rare Cards
             </h1>
             <p className="text-purple-200">
-              Black Bolt & White Flare - Special Art Rare price tracker
+              Black Bolt & White Flare - SAR, AR & SR Price Tracker
             </p>
           </div>
           <RefreshButton />
@@ -134,7 +137,7 @@ export default async function Home() {
                 <p className="text-2xl font-bold">{metadata.total}</p>
               </div>
               <div>
-                <p className="text-sm opacity-75">Showing</p>
+                <p className="text-sm opacity-75">Loaded</p>
                 <p className="text-2xl font-bold">{metadata.count}</p>
               </div>
               <div>
@@ -151,7 +154,7 @@ export default async function Home() {
           </div>
         )}
 
-        <CardGrid cards={cards} />
+        <CardsWithFilters initialCards={cards} totalCards={metadata?.total || 0} />
 
         {cards.length === 0 && !error && (
           <div className="text-center py-20">

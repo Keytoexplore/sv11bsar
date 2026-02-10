@@ -6,13 +6,20 @@ A Next.js dashboard for tracking Pokemon TCG **SV11B Black Bolt** Special Art Ra
 
 ## Features
 
-- 🎴 **Real-time price tracking** for all SAR cards from SV11B Black Bolt
-- 📊 **Market & low price** display
+- 🎴 **Real-time price tracking** for SAR, AR, and SR cards from SV11B Black Bolt & SV11W White Flare
+- 📊 **Market & low price** display with seller/listing counts
+- 🎯 **Advanced Filtering:**
+  - Filter by set (Black Bolt, White Flare, or both)
+  - Filter by rarity (SAR, AR, SR, or all)
+  - Price range filtering
+  - Full-text search by card name or number
+  - Multiple sort options (price, name, card number)
 - 🔄 **Auto-refresh** every hour (with manual refresh option)
 - 📱 **Responsive design** - works on mobile, tablet, and desktop
 - 🌙 **Dark theme** with gradient background
 - 🖼️ **High-quality card images** from TCGPlayer CDN
 - 🔗 **Direct links** to TCGPlayer for each card
+- 📈 **Real-time stats** - total cards, API credits used, last update time
 
 ## Tech Stack
 
@@ -106,23 +113,15 @@ sv11bsar/
 
 ## Customization
 
-### Change Set or Rarity
+### Customize Tracked Sets
 
-Edit `app/page.tsx` and modify the API parameters:
+Edit `app/page.tsx` and modify the `sets` array in the `getAllCards` function:
 
 ```typescript
-const response = await fetch(
-  'https://www.pokemonpricetracker.com/api/v2/cards?' + new URLSearchParams({
-    language: 'japanese',
-    search: 'Black Bolt',           // Change set here
-    rarity: 'Special Art Rare',      // Change rarity here
-    limit: '50',
-    includeHistory: 'true',
-    days: '30',
-  }),
-  // ...
-);
+const sets = ['Black Bolt', 'White Flare']; // Change this array to track different sets
 ```
+
+By default, the app tracks both Black Bolt (SV11B) and White Flare (SV11W) sets with all three rarity types (SAR, AR, SR).
 
 ### Adjust Refresh Interval
 

@@ -1,0 +1,46 @@
+'use client';
+
+import { useState, useMemo } from 'react';
+import { FilterBar, FilterState } from './FilterBar';
+import { CardGrid } from './CardGrid';
+import { filterAndSortCards, Card } from '@/lib/filterCards';
+
+interface CardsWithFiltersProps {
+  initialCards: Card[];
+  totalCards: number;
+}
+
+export function CardsWithFilters({ initialCards, totalCards }: CardsWithFiltersProps) {
+  const [filters, setFilters] = useState<FilterState>({
+    set: 'all',
+    rarity: 'all',
+    minPrice: 0,
+    maxPrice: 10000,
+    sortBy: 'price-desc',
+    searchTerm: '',
+  });
+
+  const filteredCards = useMemo(() => {
+    return filterAndSortCards(initialCards, filters);
+  }, [initialCards, filters]);
+
+  return (
+    <>
+      <FilterBar
+        onFilterChange={setFilters}
+        totalCards={totalCards}
+        filteredCount={filteredCards.length}
+      />
+      <CardGrid cards={filteredCards} />
+      {filteredCards.length === 0 && (
+        <div className="text-center py-20">
+          <div className="text-6xl mb-4">🔍</div>
+          <p className="text-xl text-purple-200">No cards match your filters</p>
+          <p className="text-sm text-purple-300 mt-2">
+            Try adjusting your search criteria
+          </p>
+        </div>
+      )}
+    </>
+  );
+}
