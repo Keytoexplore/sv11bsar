@@ -135,6 +135,16 @@ export interface TorecaPrice {
  */
 export async function loadTorecaPrices(): Promise<TorecaPrice[]> {
   try {
+    // Server-side: use fs to read the file
+    if (typeof window === 'undefined') {
+      const fs = require('fs');
+      const path = require('path');
+      const filePath = path.join(process.cwd(), 'public/data/toreca-prices.json');
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      return JSON.parse(fileContent);
+    }
+    
+    // Client-side: use fetch
     const response = await fetch('/data/toreca-prices.json');
     if (!response.ok) return [];
     return await response.json();
