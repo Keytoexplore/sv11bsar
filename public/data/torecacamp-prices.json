@@ -1,1 +1,272 @@
-[]
+[
+  {
+    "cardNumber": "171/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 980,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:28:13.583Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itx267rh3kwm_fu0c"
+  },
+  {
+    "cardNumber": "173/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 5480,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:28:15.990Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it93tgcugorz_hecj"
+  },
+  {
+    "cardNumber": "168/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 3480,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:28:18.388Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itc6ddhqr6h4_5qwx"
+  },
+  {
+    "cardNumber": "170/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 1980,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:28:20.784Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_ita83rz788bo_tvtq"
+  },
+  {
+    "cardNumber": "172/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 1980,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:28:22.945Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itcjumsk4p5n_i75o"
+  },
+  {
+    "cardNumber": "169/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 17800,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:28:25.116Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itanmywvg19w_qklx"
+  },
+  {
+    "cardNumber": "167/086",
+    "setCode": "SV11B",
+    "rarity": "SAR",
+    "price_jpy": 2580,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:28:29.628Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it3i3r1n4hnp_6xme"
+  },
+  {
+    "cardNumber": "166/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 380,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:29:40.850Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it12k9wykgls_nlor"
+  },
+  {
+    "cardNumber": "165/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 880,
+    "in_stock": true,
+    "last_updated": "2026-02-10T15:29:43.223Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it6gzv1ql5xp_pu05"
+  },
+  {
+    "cardNumber": "160/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:29:45.609Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_ituvqflkwsb4_gyb9"
+  },
+  {
+    "cardNumber": "161/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 580,
+    "in_stock": true,
+    "last_updated": "2026-02-10T15:29:48.010Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_ita1x7fvneeo_whgc"
+  },
+  {
+    "cardNumber": "162/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:29:50.406Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itrmilr9spqm_ncof"
+  },
+  {
+    "cardNumber": "164/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 380,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:29:52.791Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itdolx1gj94w_jhnx"
+  },
+  {
+    "cardNumber": "163/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:29:54.978Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it4qlrvpm0zu_vden"
+  },
+  {
+    "cardNumber": "159/086",
+    "setCode": "SV11B",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:30:04.008Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itr0hiww85xq_shpx"
+  },
+  {
+    "cardNumber": "172/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 780,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:30:08.938Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itcku3ljncjo_mou5"
+  },
+  {
+    "cardNumber": "173/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 7780,
+    "in_stock": true,
+    "last_updated": "2026-02-10T15:30:11.121Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_its5kr2ng9ei_xivk"
+  },
+  {
+    "cardNumber": "171/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 4280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:30:18.122Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itbr3lnuejhg_djsx"
+  },
+  {
+    "cardNumber": "167/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 1780,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:30:20.530Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itgljwsrevqc_tjnp"
+  },
+  {
+    "cardNumber": "170/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 2480,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:30:22.840Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itudxivgvi1c_yrag"
+  },
+  {
+    "cardNumber": "169/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 2480,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:30:25.233Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itw0p2d6y2s8_c3xe"
+  },
+  {
+    "cardNumber": "168/086",
+    "setCode": "SV11W",
+    "rarity": "SAR",
+    "price_jpy": 17800,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:30:27.422Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itpu33abf1ua_brwj"
+  },
+  {
+    "cardNumber": "165/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:31:44.108Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it5r75gkcsi2_yajz"
+  },
+  {
+    "cardNumber": "160/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 580,
+    "in_stock": true,
+    "last_updated": "2026-02-10T15:31:46.270Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itv8vh9efsbu_zmmm"
+  },
+  {
+    "cardNumber": "163/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:31:48.453Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it3oq8h0vh1k_jrii"
+  },
+  {
+    "cardNumber": "162/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 580,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:31:50.819Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itefi5tdhgng_yroa"
+  },
+  {
+    "cardNumber": "164/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:31:53.246Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it9pu884rkeg_iq2o"
+  },
+  {
+    "cardNumber": "159/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:31:55.439Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it229ulhwyi8_eknu"
+  },
+  {
+    "cardNumber": "166/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 2780,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:31:57.880Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_itx53t1r5ras_tdil"
+  },
+  {
+    "cardNumber": "161/086",
+    "setCode": "SV11W",
+    "rarity": "SR",
+    "price_jpy": 280,
+    "in_stock": false,
+    "last_updated": "2026-02-10T15:32:00.072Z",
+    "url": "https://torecacamp-pokemon.com/products/rc_it4stmqjww2c_1ddq"
+  }
+]
