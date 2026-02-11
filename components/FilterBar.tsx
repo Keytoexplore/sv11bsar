@@ -9,7 +9,7 @@ interface FilterBarProps {
 }
 
 export interface FilterState {
-  set: 'all' | 'blackbolt' | 'whiteflare' | 'm3' | 'm2a';
+  set: 'all' | 'blackbolt' | 'whiteflare' | 'm3' | 'm2a' | 'm2' | 'm1l' | 'm1s';
   rarity: 'all' | 'SAR' | 'AR' | 'SR';
   minPrice: number;
   maxPrice: number;
