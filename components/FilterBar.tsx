@@ -74,6 +74,9 @@ export function FilterBar({ onApplyFilters, totalCards, filteredCount }: FilterB
             <option value="whiteflare">White Flare (SV11W)</option>
             <option value="m3">M3: Nihil Zero</option>
             <option value="m2a">M2a: High Class Pack MEGA Dream ex</option>
+            <option value="m2">M2: Mega Set 2</option>
+            <option value="m1l">M1L: Mega Brave</option>
+            <option value="m1s">M1S: Mega Symphonia</option>
           </select>
         </div>
 

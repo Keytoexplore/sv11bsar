@@ -33,6 +33,9 @@ export function filterAndSortCards(cards: Card[], filters: FilterState): Card[] 
         if (filters.set === 'whiteflare' && !setName.includes('white flare')) return false;
         if (filters.set === 'm3' && !setName.includes('m3')) return false;
         if (filters.set === 'm2a' && !setName.includes('m2a')) return false;
+        if (filters.set === 'm2' && (!setName.includes('m2') || setName.includes('m2a'))) return false;
+        if (filters.set === 'm1l' && !setName.includes('m1l')) return false;
+        if (filters.set === 'm1s' && !setName.includes('m1s')) return false;
       }
 
       // Rarity filter
